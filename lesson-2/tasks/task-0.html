@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="shortcut icon" href="../../assets/js.png" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      <a href="../index-2.html"
+        ><button class="btn-go-back custom-btn btn-1" type="button">
+          Go back
+        </button></a
+      >
+    </p>
+    <h1>Задача № 0</h1>
+    <p>Обчислити значення виразів.</p>
+    <img src="./img-t0.png" alt="задача" width="200" height="200" />
+    <br />
+    <br />
+    <br />
+    <br />
+    <script>
+      //1. Введення необхідних данних
+      let a = parseInt(prompt('Введіть a', '0'));
+      let b = parseInt(prompt('Введіть b', '0'));
+      let c = parseInt(prompt('Введіть c', '0'));
+
+      //2. Обчіслення результату
+      let s1 = a + 12 + b;
+      let s2 = Math.sqrt((a + b) / (2 * a));
+      let s3 = Math.cbrt((a + b) * c);
+      let s4 = Math.sin(a / -b);
+
+      //3. Виведення результату
+      document.write(`Результат обчіслення S1 = ${s1.toFixed(2)} <br>`);
+      document.write(`Результат обчіслення S2 = ${s2.toFixed(2)} <br>`);
+      document.write(`Результат обчіслення S3 = ${s3.toFixed(2)} <br>`);
+      document.write(`Результат обчіслення S4 = ${s4.toFixed(2)} <br>`);
+    </script>
+  </body>
+</html>

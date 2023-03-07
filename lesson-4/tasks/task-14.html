@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="shortcut icon" href="../../assets/js.png" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      <a href="../index-4.html"
+        ><button class="btn-go-back custom-btn btn-1" type="button">
+          Go back
+        </button></a
+      >
+    </p>
+    <h1>Задача № 14</h1>
+    <p>
+      Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач
+      поступово вводить суму грошей до тих пір, поки суми не буде достатньо для
+      оплати товарів (кожного разу користувачу повідомляють, яку ще суму
+      потрібно ввести).
+    </p>
+    <script>
+      let totalSum = parseInt(prompt('Повідомте покупцю сумму до сплати.'));
+
+      do {
+        const userSum = parseInt(
+          prompt(
+            `До сплати ${totalSum} грн. Внесіть кошти для здійснення оплати.`,
+          ),
+        );
+
+        if (userSum <= totalSum) {
+          alert(`Внесено ${userSum} грн.`);
+          totalSum -= userSum;
+        } else {
+          alert(`Ви не сплатили ще ${totalSum} грн.`);
+        }
+      } while (totalSum > 0);
+      alert(`Ви сплатили всю суму, дякуємо за покупку!`);
+    </script>
+  </body>
+</html>

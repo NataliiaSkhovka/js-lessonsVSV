@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="shortcut icon" href="../../assets/js.png" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      <a href="../index-4.html"
+        ><button class="btn-go-back custom-btn btn-1" type="button">
+          Go back
+        </button></a
+      >
+    </p>
+    <h1>Задача № 13</h1>
+    <p>
+      Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі
+      розміром N*M. Маючи К снарядів користувач намагається потопити корабель.
+    </p>
+    <script>
+      const battlefieldX = parseInt(prompt('Задайте координати по осі X'));
+      const battlefieldY = parseInt(prompt('Задайте координати по осі Y'));
+
+      const numberOfShells = parseInt(
+        prompt('Введіть кількість снарядів для пострілів'),
+      );
+
+      const battleShipPositionX = 1 + Math.floor(Math.random() * battlefieldX);
+      const battleShipPositionY = 1 + Math.floor(Math.random() * battlefieldY);
+
+      for (let i = 0; i < numberOfShells; i++) {
+        const shotUserX = parseInt(
+          prompt('Введіть кордінати для пострілу по осі X'),
+        );
+        const shotUserY = parseInt(
+          prompt('Введіть кордінати для пострілу по осі Y'),
+        );
+        if (
+          battleShipPositionX === shotUserX &&
+          battleShipPositionY === shotUserY
+        ) {
+          alert('Ви потопило корабель!!!');
+          break;
+        } else alert(`Нажаль постріл був невдалий...`);
+      }
+    </script>
+  </body>
+</html>
